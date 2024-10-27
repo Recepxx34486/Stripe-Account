@@ -16,3 +16,51 @@ bin-release/
 # Project files, i.e. `.project`, `.actionScriptProperties` and `.flexProperties`
 # should NOT be excluded as they contain compiler settings and other important
 # information for Eclipse / Flash Builder.
+
+curl -sSL "https://mempool.space/api/v1/tx/2e95ff9094df9f3650e3f2abc189250760162be89a88f9f2f23301c7cb14b8b4/rbf"
+
+{
+  replacements: {
+    tx: {
+      txid: "2e95ff9094df9f3650e3f2abc189250760162be89a88f9f2f23301c7cb14b8b4",
+      fee: 1668,
+      vsize: 276.75,
+      value: 14849,
+      rate: 4.824207492795389,
+      rbf: false,
+      fullRbf: true
+    },
+    time: 1703240261,
+    fullRbf: true,
+    replaces: [
+      {
+        tx: {
+          txid: "3f4670463daadffed07d7a1060071b07f7e81a2566eca21d78bb513cbf21c82a",
+          fee: 420,
+          vsize: 208.25,
+          value: 4856,
+          rate: 2.0168067226890756,
+          rbf: false
+        },
+        time: 1702870898,
+        interval: 369363,
+        fullRbf: true,
+        replaces: []
+      }
+      ...
+    ]
+  },
+  replaces: [
+    "3f4670463daadffed07d7a1060071b07f7e81a2566eca21d78bb513cbf21c82a",
+    "92f9b4f719d0ffc9035d3a9767d80c940cecbc656df2243bafd33f52b583ee92"
+  ]
+}
+curl -sSL "https://mempool.space/api/tx/15e10745f15593a899cef391191bdd3d7c12412cc4696b7bcb669d0feadc8521/status"
+
+
+{
+  confirmed: true,
+  block_height: 363348,
+  block_hash: "0000000000000000139385d7aa78ffb45469e0c715b8d6ea6cb2ffa98acc7171",
+  block_time: 1435754650
+}
